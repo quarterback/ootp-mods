@@ -1,0 +1,168 @@
+/* OOTP Custom Styles Override — v7.2 (Light Mode with Dark Header) */
+
+:root {
+  --font-body: 'Atkinson Hyperlegible', 'Segoe UI', sans-serif;
+  --font-mono: 'Courier New', monospace;
+  --bg-color: #f8f7f2; /* off-white, newsprint-inspired */
+  --text-color: #202020; /* dark gray for strong contrast */
+  --accent-color: #003366; /* deep blue for baseball theme */
+  --card-bg: #ffffff;
+  --border-color: #ccc;
+  --header-bg: #1c1c1c; /* DARK top header background only */
+  --hover-color: #f0f0f0;
+  --header-text: #ffffff; /* bright header text for contrast */
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.25rem;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+th, td {
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  border: 1px solid var(--border-color);
+  vertical-align: middle;
+  color: var(--text-color);
+}
+
+th {
+  background-color: var(--header-bg);
+  font-weight: 700;
+  color: var(--header-text);
+}
+
+/* Fix nested table padding */
+table table {
+  margin: 0;
+  border: none;
+}
+
+table table td,
+table table th {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.9rem;
+  border: none;
+}
+
+/* Remove hover changes completely */
+tr:hover {
+  background-color: inherit !important;
+}
+
+/* Alternating row visibility */
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* Layout helpers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: none;
+}
+
+pre, code {
+  background-color: #f3f4f6;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Strip all legacy background and shadow styles */
+body, html, table, td, th {
+  background-image: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Player name headers */
+.reptitle {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #003366;
+  background-color: transparent;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.repsubtitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  background-color: var(--header-bg);
+  color: var(--header-text) !important;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.repsubtitle a.boxlink {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.repsubtitle + div,
+.repsubtitle + div + div {
+  background-color: var(--header-bg);
+  color: #ffffff !important;
+  font-size: 18px;
+  text-align: center;
+  padding: 4px 0;
+}
+
+/* Score highlight style */
+.box-score-highlight {
+  background: #ffefc2;
+  font-weight: bold;
+}
